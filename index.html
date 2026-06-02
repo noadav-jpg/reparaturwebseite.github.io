@@ -18,9 +18,14 @@
         }
         .header{
             background-color:#aaccff;
-            padding:30px;
+            padding:60px;
             text-align:center;
             font-size:36px;
+        }
+        .article{
+            background-color:#eefcff;
+            padding:20px;
+            margin:20px;
         }
     </style>
 </head>
@@ -29,19 +34,30 @@
         Wilhelm-Gymnasium<img src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" style="float:none;width:120px;height:40px;" class="transparent">
     </header>
     <div>
-        <h2>Reparatur</h2>
-        <div>
-            <label for="gebaudeetraum">Gebäude (A-F) und Raum:</label>
-
-            <input
-            type=text
-            name="gebaudeetraum"
-            id="gebaudeetraum"
-            required
-            minlength=4
-            maxlength=5
-            size=10>
-        </div>
+        <section class="section">
+            <h2 style="text-align:center;">Reparatur</h2>  
+                <article class="article">
+                    <label for="gebaude">Gebäude:</label>
+                        <select name="gebaude" id="gebaude" required>
+                            <option value="" disabled selected>Gebäude auswählen</option>
+                            <option value="A">Hauptgebäude (A)</option>
+                            <option value="B">Außenstelle (B)</option>
+                            <option value="C">Sporthalle - Außenstelle (C)</option>
+                            <option value="E">Container - Hauptstelle (E)</option>
+                            <option value="F">Container - Außenstelle (F)</option>
+                        </select>
+                    <br>
+                    <label for="raum">Raum:</label>
+                        <input
+                        type=text
+                        name="raum"
+                        id="raum"
+                        required
+                        minlength=4
+                        maxlength=5
+                        size=10>
+                </article>
+        </section>
     </div>
 </body>
 </html>
