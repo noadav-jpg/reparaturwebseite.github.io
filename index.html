@@ -12,20 +12,33 @@
     <meta property="og:title" content="Startseite - Wilhelm-Gymnasium Braunschweig">
     <meta property="og:url" content="https://wilhelm-gym.de/">
     <meta property="og:site_name" content="Wilhelm-Gymnasium Braunschweig">
+    <style>
+        .header{
+            background-color:#aaccff;
+            padding:30px;
+            text-align:center;
+            font-size:36px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Wilhelm-Gymnasium<img src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" style="float:none;width:120px;height:40px;" class="transparent"></h1>
-    <br>
-    <h2>Reparatur</h2>
-    <label for="gebaudeetraum">Gebäude (A-F) und Raum:</label>
+    <header class="header">
+        Wilhelm-Gymnasium<img src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" style="float:none;width:120px;height:40px;" class="transparent">
+    </header>
+    <div>
+        <h2>Reparatur</h2>
+        <div>
+            <label for="gebaudeetraum">Gebäude (A-F) und Raum:</label>
 
-    <input
-        type=text
-        name="gebaudeetraum"
-        id="gebaudeetraum"
-        required
-        minlength=4
-        maxlength=5
-        size=10>
+            <input
+            type=text
+            name="gebaudeetraum"
+            id="gebaudeetraum"
+            required
+            minlength=4
+            maxlength=5
+            size=10>
+        </div>
+    </div>
 </body>
 </html>
