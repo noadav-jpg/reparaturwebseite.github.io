@@ -16,34 +16,20 @@
     <meta property="og:site_name" content="Wilhelm-Gymnasium Braunschweig">
 </head>
 <body>
-    <div class ="wrapper header-default-style">
-        <div class="header-logl-section">
-            <div class="header-logo-inner hidden-xs">
-                <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="navbar-logo">
-                        <h1>
-    <a href="https://wilhelm-gym.de/" title="Wilhelm-Gymnasium Braunschweig">
-                        <img class="site-logo hidden-xs" src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="Wilhelm-Gymnasium Braunschweig">
-                            <img class="mobile-logo visible-xs" src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="Wilhelm-Gymnasium Braunschweig">
-                                                <img class="sticky-logo" src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="Wilhelm-Gymnasium Braunschweig">
-                                                                <img class="sticky-mobile-logo" src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="Wilhelm-Gymnasium Braunschweig">
-                            
-            </a>
-</h1>                    </div> <!-- .navbar-header -->
-                </div>
-                <div class="col-sm-9">
-                    <div class="header-contact-info">
-                        <ul>
- 	<li><a href="http://wilhelm-gym.net/iserv/">iserv </a> <a href="https://wilhelm-gym-braunschweig.webuntis.com/">webuntis </a> <a href="https://www.instagram.com/wilhelmgym_bs">Instagram </a></li>
-</ul>                    </div>
-                </div>
-            </div>
-        </div>
+    <h1>Wilhelm-Gymnasium</h1>
+    <a href="wilhelm-gym.de">
+        <img src="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" alt="https://wilhelm-gym.de/wp-content/uploads/2018/06/wglogo_transparent.png" class="transparent">
+    </a>
+    <br>
+    <h2>Reparatur</h2>
+    <label for="gebaude">Gebäude:</label>
 
-            </div>
-        </div>
-    </div>
+    <select name="gebaude" id="gebaude">
+        <option value="A">Hauptgebäude (A)</option>
+        <option value="B">Außenstelle (B)</option>
+        <option value="C">Container - Außenstelle (C)</option>
+        <option value="D">Sporthalle - Außenstelle (D)</option>
+        <option value="F">Container - Hauptgebäude (F)</option>
+    </select>
 </body>
 </html>
