@@ -118,26 +118,26 @@
                     <br><br>
                     <p text-align="center">Gegenstand:</p>
                     <div class="checkbox-container">
-                        <label for="objekt1">Beamer</label> <input type="checkbox" id="objekt1" name="objekt1" value="Beamer" class="checkbox_stick_left">
+                        <label for="objekt1">Beamer</label> <input type="checkbox" id="objekt1" name="objekt1" value="Beamer">
                     </div>
                     <div class="checkbox-container">
-                        <label for="objekt2">Boden</label> <input type="checkbox" id="objekt2" name="objekt2" value="Boden" class="checkbox_stick_left">
+                        <label for="objekt2">Boden</label> <input type="checkbox" id="objekt2" name="objekt2" value="Boden">
                     </div>
                     <div class="checkbox-container">
                         <label for="objekt3">Decke</label>
-                        <input type="checkbox" id="objekt3" name="objekt3" value="Decke" class="checkbox_stick_left">
+                        <input type="checkbox" id="objekt3" name="objekt3" value="Decke">
                     </div>
                     <div class="checkbox-container">
                         <label for="objekt4">Fenster</label>
-                        <input type="checkbox" id="objekt4" name="objekt4" value="Fenster" class="checkbox_stick_left">
+                        <input type="checkbox" id="objekt4" name="objekt4" value="Fenster">
                     </div>
                     <div class="checkbox-container">
                         <label for="objekt5">Papiertuchspender</label>
-                        <input type="checkbox" id="objekt5" name="objekt5" value="Papiertuchspender" class="checkbox_stick_left">
+                        <input type="checkbox" id="objekt5" name="objekt5" value="Papiertuchspender">
                     </div>
                     <div class="checkbox-container">
                         <label for="objekt6">Heizung</label>
-                        <input type="checkbox" id="objekt6" name="objekt6" value="Heizung" class="checkbox_stick_left">
+                        <input type="checkbox" id="objekt6" name="objekt6" value="Heizung">
                     </div>
                     <div class="checkbox-container">
                         <label for="objekt7">Kabel (wie viele?)</label>
@@ -204,13 +204,22 @@
                         <input type="checkbox" id="objekt22" name="objekt22" value="Whiteboard">
                     </div>
                     <br><br>
-                    <input type="radio" id="problem1" name="problem1" value="fehlend">
-                    <label for="fehlend">fehlend</label><br>
-                    <input type="radio" id="problem2" name="problem2" value="kaputt">
-                    <label for="kaputt">kaputt</label><br>
-                    <input type="radio" id="problem3" name="problem3" value="sonstiges">
-                    <label for="sonstiges">sonstiges</label>
-                    <input type="text" id="problem3text" name="problem3text">
+                    <p>Problem:</p>
+                    <div>
+                        <div class="checkbox-container">
+                            <label for="fehlend">fehlend</label><br>
+                            <input type="radio" id="problem1" name="problem1" value="fehlend">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="kaputt">kaputt</label><br>
+                            <input type="radio" id="problem2" name="problem2" value="kaputt">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="sonstiges">sonstiges</label>
+                            <input type="radio" id="problem3" name="problem3" value="sonstiges">
+                            <input type="text" id="problem3text" name="problem3text">
+                        </div>
+                    </div>
                     <br><br>
                     <label for="details">Details:</label>
                     <input type="text" id="details" name="details" value="Details eingeben" size="25">
