@@ -47,10 +47,11 @@
     </header>
     <div>
         <section class="section">
-            <h2 style="text-align:center;">Reparatur</h2>  
+            <h2 style="text-align:center;">Reparatur</h2>
+            <p><small style="text-align: center;">*Pflichtfeld</small></p>
                 <article class="article">
                     <form class="form">
-                        <label for="gebaeudeetraum">Gebäude und Raum:</label>
+                        <label for="gebaeudeetraum">Gebäude und Raum*:</label>
                         <select name="gebaeudeetraum" id="gebaeudeetraum" required>
                             <option value="" disabled selected>Raum auswählen</option>
                             <option value="0">-A154</option>
@@ -234,7 +235,7 @@
                     </form>
                     <hr>
                     <form class="form">
-                        <label for="details">Details:</label>
+                        <label for="details">Details*:</label>
                         <input type="text" id="details" name="details" value="Details eingeben" size="25" class="detailstextbox" required>
                     </form>
                     <hr>
@@ -245,7 +246,7 @@
                     <hr>
                     <form class="form">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" value="Name eingeben" required>
+                        <input type="text" id="name" name="name" value="Name eingeben">
                     </form>
                     <hr>
                     <input type="submit" value="Reparatur melden">
