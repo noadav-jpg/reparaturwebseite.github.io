@@ -22,11 +22,14 @@
         }
         .form{
             background-color:#e6f0ff;
-            display:inline-grid;
+            display:flex;
             flex-direction:column;
-            align-items:left;
+            gap:10px;
             padding:20px;
             margin:20px;
+        }
+        .checkbox-container{
+            display:flex;
         }
     </style>
 </head>
@@ -37,7 +40,7 @@
     <div>
         <section class="section">
             <h2 style="text-align:center;">Reparatur</h2>  
-                <article class="article">
+                <form class="form">
                     <label for="gebaude">Gebäude:</label>
                         <select name="gebaude" id="gebaude" required>
                             <option value="" disabled selected>Gebäude auswählen</option>
@@ -50,57 +53,102 @@
                     <br><br>
                    
                     <br><br>
-                    <form class="form">
-                        <p text-align="center">Gegenstand:</p>
-                        <input type="checkbox" id="objekt1" name="objekt1" value="Beamer">
-                        <label for="objekt1">Beamer</label><br>
-                        <input type="checkbox" id="objekt2" name="objekt2" value="Boden">
-                        <label for="objekt2">Boden</label><br>
-                        <input type="checkbox" id="objekt3" name="objekt3" value="Decke">
-                        <label for="objekt3">Decke</label><br>
-                        <input type="checkbox" id="objekt4" name="objekt4" value="Fenster">
-                        <label for="objekt4">Fenster</label><br>
-                        <input type="checkbox" id="objekt5" name="objekt5" value="Papiertuchspender">
-                        <label for="objekt5">Papiertuchspender</label><br>
-                        <input type="checkbox" id="objekt6" name="objekt6" value="Heizung">
-                        <label for="objekt6">Heizung</label><br>
+                    <p text-align="center">Gegenstand:</p>
+                    <div class="checkbox-container">
+                        <label for="objekt1">Beamer</label> <input type="checkbox" id="objekt1" name="objekt1" value="Beamer" class="checkbox_stick_left">
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt2">Boden</label> <input type="checkbox" id="objekt2" name="objekt2" value="Boden" class="checkbox_stick_left">
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt3">Decke</label>
+                        <input type="checkbox" id="objekt3" name="objekt3" value="Decke" class="checkbox_stick_left">
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt4">Fenster</label>
+                        <input type="checkbox" id="objekt4" name="objekt4" value="Fenster" class="checkbox_stick_left">
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt5">Papiertuchspender</label>
+                        <input type="checkbox" id="objekt5" name="objekt5" value="Papiertuchspender" class="checkbox_stick_left">
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt6">Heizung</label>
+                        <input type="checkbox" id="objekt6" name="objekt6" value="Heizung" class="checkbox_stick_left">
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt7">Kabel (wie viele?)</label>
                         <input type="number" id="objekt7" name="objekt7" value="Kabel" min="0">
-                        <label for="objekt7">Kabel (wie viele?)</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt8">Lampe (wie viele?)</label>
                         <input type="number" id="objekt8" name="objekt8" value="Lampe" min="0">
-                        <label for="objekt8">Lampe (wie viele?)</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt9">Lautsprecher</label>
                         <input type="checkbox" id="objekt9" name="objekt9" value="Lautsprecher">
-                        <label for="objekt9">Lautsprecher</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt10">Mülleimer</label>
                         <input type="checkbox" id="objekt10" name="objekt10" value="Mülleimer">
-                        <label for="objekt10">Mülleimer</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt11">Steckdose (wie viele?)</label>
                         <input type="number" id="objekt11" name="objekt11" value="Steckdose" min="0">
-                        <label for="objekt11">Steckdose (wie viele?)</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt12">Seifenspender</label>
                         <input type="checkbox" id="objekt12" name="objekt12" value="Seifenspender">
-                        <label for="objekt12">Seifenspender</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt13">Smartboard</label>
                         <input type="checkbox" id="objekt13" name="objekt13" value="Smartboard">
-                        <label for="objekt13">Smartboard</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt14">Stuhl (wie viele?)</label>
                         <input type="number" id="objekt14" name="objekt14" value="Stuhl" min="0">
-                        <label for="objekt14">Stuhl (wie viele?)</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt15">Tafel</label>
                         <input type="checkbox" id="objekt15" name="objekt15" value="Tafel" min="0">
-                        <label for="objekt15">Tafel</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt16">Tisch (wie viele?)</label>
                         <input type="number" id="objekt16" name="objekt16" value="Tisch" min="0">
-                        <label for="objekt16">Tisch (wie viele?)</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt17">Tür</label>
                         <input type="checkbox" id="objekt17" name="objekt17" value="Tür">
-                        <label for="objekt17">Tür</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt18">Uhr</label>
                         <input type="checkbox" id="objekt18" name="objekt18" value="Uhr">
-                        <label for="objekt18">Uhr</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt19">Vorhang</label>
                         <input type="checkbox" id="objekt19" name="objekt19" value="Vorhang">
-                        <label for="objekt19">Vorhang</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt20">Wand</label>
                         <input type="checkbox" id="objekt20" name="objekt20" value="Wand">
-                        <label for="objekt20">Wand</label><br>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt21">Waschbecken</label>
                         <input type="checkbox" id="objekt21" name="objekt21" value="Waschbecken">
-                        <label for="objekt21">Waschbecken</label><br>
-                        <input type="checkbox" id="objekt22" name="objekt22" value="Smartboard">
-                        <label for="objekt22">Smartboard</label><br>
-                    </form>
+                    </div>
+                    <div class="checkbox-container">
+                        <label for="objekt22">Whiteboard</label>
+                        <input type="checkbox" id="objekt22" name="objekt22" value="Whiteboard">
+                    </div>
                     <br><br>
                     <label for="details">Details:</label>
-                    <input type="text" id="details" name="details" value="Details">
-                </article>
+                    <input type="text" id="details" name="details" value="Details eingeben">
+                    <br><br>
+                    <label for="dringlichkeit">Dringlichkeit (1-10):</label>
+                    <input type="range" id="dringlichkeit" name="dringlichkeit" min="1" max="10" step="1" value="1">
+                    <br><br>
+                    <input type="submit" value="Reparatur melden">
+                </form>
         </section>
     </div>
 </body>
