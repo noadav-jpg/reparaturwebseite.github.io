@@ -7,28 +7,37 @@
     <style>
         *{
             font-family:Arial, Helvetica, sans-serif;
+            border-radius:20px;
         }
         .header{
             background-color:#aaccff;
             padding:60px;
+            margin:40px;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.20);
             text-align:center;
             font-size:36px;
-            border-radius:20px 20px 20px 20px;
         }
         .article{
-            background-color:#eefcff;
+            background-color:#cce0ff;
             padding:20px;
             margin:20px;
-            border-radius:20px 20px 20px 20px;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.20);
         }
         .form{
-            background-color:#dddddd;
+            background-color:#e6f0ff;
             display:flex;
             flex-direction:column;
-            align-items:center;
+            gap:10px;
             padding:20px;
             margin:20px;
-            border-radius:20px 20px 20px 20px;
+            line-height: 1.2;
+        }
+        .checkbox-container{
+            display:flex;
+        }
+        .detailstextbox{
+            height:100px;
+            text-align:left;
         }
     </style>
 </head>
@@ -38,25 +47,17 @@
     </header>
     <div>
         <section class="section">
-            <h2 style="text-align:center;">Reparatur</h2>  
+            <h2 style="text-align:center;">Reparatur</h2>
+            <p style="text-align:center;"><small>*Pflichtfeld</small></p>
                 <article class="article">
-                    <label for="gebaude">Gebäude:</label>
-                        <select name="gebaude" id="gebaude" required>
-                            <option value="" disabled selected>Gebäude auswählen</option>
-                            <option value="A">Hauptgebäude (A)</option>
-                            <option value="B">Außenstelle (B)</option>
-                            <option value="C">Sporthalle - Außenstelle (C)</option>
-                            <option value="D">Container - Hauptstelle (D)</option>
-                            <option value="F">Container - Außenstelle (F)</option>
-                        </select>
-                    <br><br>
-                    <label for="Raum">Raum:</label>
-                        <select name="raum" id="raum" required>
+                    <form class="form">
+                        <label for="gebaeudeetraum">Gebäude und Raum*:</label>
+                        <select name="gebaeudeetraum" id="gebaeudeetraum" required>
                             <option value="" disabled selected>Raum auswählen</option>
-                            <option value="0">A001</option>
-                            <option value="1">-A154</option>
-                            <option value="2">-A157</option>
-                            <option value="3">-A158</option>
+                            <option value="0">-A154</option>
+                            <option value="1">-A157</option>
+                            <option value="2">-A158</option>
+                            <option value="3">A001</option>
                             <option value="4">A010</option>
                             <option value="5">A024</option>
                             <option value="6">A025</option>
@@ -104,62 +105,152 @@
                             <option value="48">B220</option>
                             <option value="49">B221</option>
                             <option value="50">B230</option>
-                            <option value="51">D001</option>
-                            <option value="52">D004</option>
-                            <option value="53">D005</option>
-                            <option value="54">D006</option>
-                            <option value="55">F001</option>
-                            <option value="56">F002</option>
-                            <option value="57">F003</option>
-                            <option value="58">F004</option>
+                            <option value="51">C001</option> 
+                            <option value="52">D001</option>
+                            <option value="53">D004</option>
+                            <option value="54">D005</option>
+                            <option value="55">D006</option>
+                            <option value="56">F001</option>
+                            <option value="57">F002</option>
+                            <option value="58">F003</option>
+                            <option value="59">F004</option>
                         </select>
-                    <br><br>
+                        <p>Buchstaben der jeweiligen Gebäude:</p>
+                        <ul>
+                            <li>A: Hauptgebäude</li>
+                            <li>B: Außenstelle</li>
+                            <li>C: Sporthalle - Außenstelle</li>
+                            <li>D: Container - Hauptstelle</li>
+                            <li>F: Container - Außenstelle</li>
+                        </ul>
+                    </form>
+                    <hr>
                     <form class="form">
-                        <p text-align="center">Gegenstand:</p>
-                        <input type="checkbox" id="objekt1" name="objekt1" value="Beamer">
-                        <label for="objekt1">Beamer</label><br>
-                        <input type="checkbox" id="objekt2" name="objekt2" value="Boden">
-                        <label for="objekt2">Boden</label><br>
-                        <input type="checkbox" id="objekt3" name="objekt3" value="Decke">
-                        <label for="objekt3">Decke</label><br>
-                        <input type="checkbox" id="objekt4" name="objekt4" value="Fenster">
-                        <label for="objekt4">Fenster</label><br>
-                        <input type="checkbox" id="objekt5" name="objekt5" value="Papiertuchspender">
-                        <label for="objekt5">Papiertuchspender</label><br>
-                        <input type="checkbox" id="objekt6" name="objekt6" value="Heizung">
-                        <label for="objekt6">Heizung</label><br>
-                        <input type="number" id="objekt7" name="objekt7" value="Kabel" required min="0">
-                        <label for="objekt7">Kabel (wie viele?)</label><br>
-                        <input type="number" id="objekt8" name="objekt8" value="Lampe" required min="0">
-                        <label for="objekt8">Lampe (wie viele?)</label><br>
-                        <input type="checkbox" id="objekt9" name="objekt9" value="Lautsprecher">
-                        <label for="objekt9">Lautsprecher</label><br>
-                        <input type="checkbox" id="objekt10" name="objekt10" value="Mülleimer">
-                        <label for="objekt10">Mülleimer</label><br>
-                        <input type="number" id="objekt11" name="objekt11" value="Steckdose" required min="0">
-                        <label for="objekt11">Steckdose (wie viele?)</label><br>
-                        <input type="checkbox" id="objekt12" name="objekt12" value="Seifenspender">
-                        <label for="objekt12">Seifenspender</label><br>
-                        <input type="checkbox" id="objekt13" name="objekt13" value="Smartboard">
-                        <label for="objekt13">Smartboard</label><br>
-                        <input type="number" id="objekt14" name="objekt14" value="Stuhl" required min="0">
-                        <label for="objekt14">Stuhl (wie viele?)</label><br>
-                        <input type="checkbox" id="objekt15" name="objekt15" value="Tafel" required min="0">
-                        <label for="objekt15">Tafel</label><br>
-                        <input type="number" id="objekt16" name="objekt16" value="Tisch" required min="0">
-                        <label for="objekt16">Tisch (wie viele?)</label><br>
-                        <input type="checkbox" id="objekt17" name="objekt17" value="Tür">
-                        <label for="objekt17">Tür</label><br>
-                        <input type="checkbox" id="objekt18" name="objekt18" value="Uhr">
-                        <label for="objekt18">Uhr</label><br>
-                        <input type="checkbox" id="objekt19" name="objekt19" value="Vorhang">
-                        <label for="objekt19">Vorhang</label><br>
-                        <input type="checkbox" id="objekt20" name="objekt20" value="Wand">
-                        <label for="objekt20">Wand</label><br>
-                        <input type="checkbox" id="objekt21" name="objekt21" value="Waschbecken">
-                        <label for="objekt21">Waschbecken</label><br>
-                        <input type="checkbox" id="objekt22" name="objekt22" value="Smartboard">
-                        <label for="objekt22">Smartboard</label><br>
+                        <p text-align="center">Gegenstand*:</p>
+                        <div class="checkbox-container">
+                            <label for="objekt1">Beamer</label><br>
+                            <input type="checkbox" id="objekt1" name="objekt" value="Beamer">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt2">Boden</label><br>
+                            <input type="checkbox" id="objekt2" name="objekt" value="Boden">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt3">Decke</label><br>
+                            <input type="checkbox" id="objekt3" name="objekt" value="Decke">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt4">Fenster</label><br>
+                            <input type="checkbox" id="objekt4" name="objekt" value="Fenster">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt5">Papiertuchspender</label><br>
+                            <input type="checkbox" id="objekt5" name="objekt" value="Papiertuchspender">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt6">Heizung</label><br>
+                            <input type="checkbox" id="objekt6" name="objekt" value="Heizung">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt7">Kabel (wie viele?)</label><br>
+                            <input type="number" id="objekt7" name="objekt" value="Kabel" min="0">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt8">Lampe (wie viele?)</label><br>
+                            <input type="number" id="objekt8" name="objekt" value="Lampe" min="0">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt9">Lautsprecher</label><br>
+                            <input type="checkbox" id="objekt9" name="objekt" value="Lautsprecher">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt10">Mülleimer</label><br>
+                            <input type="checkbox" id="objekt10" name="objekt" value="Mülleimer">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt11">Steckdose (wie viele?)</label><br>
+                            <input type="number" id="objekt11" name="objekt" value="Steckdose" min="0">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt12">Seifenspender</label><br>
+                            <input type="checkbox" id="objekt12" name="objekt" value="Seifenspender">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt13">Smartboard</label><br>
+                            <input type="checkbox" id="objekt13" name="objekt" value="Smartboard">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt14">Stuhl (wie viele?)</label><br>
+                            <input type="number" id="objekt14" name="objekt" value="Stuhl" min="0">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt15">Tafel</label><br>
+                            <input type="checkbox" id="objekt15" name="objekt" value="Tafel" min="0">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt16">Tisch (wie viele?)</label><br>
+                            <input type="number" id="objekt16" name="objekt" value="Tisch" min="0">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt17">Tür</label><br>
+                            <input type="checkbox" id="objekt17" name="objekt" value="Tür">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt18">Uhr</label><br>
+                            <input type="checkbox" id="objekt18" name="objekt" value="Uhr">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt19">Vorhang</label><br>
+                            <input type="checkbox" id="objekt19" name="objekt" value="Vorhang">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt20">Wand</label><br>
+                            <input type="checkbox" id="objekt20" name="objekt" value="Wand">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt21">Waschbecken</label><br>
+                            <input type="checkbox" id="objekt21" name="objekt" value="Waschbecken">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="objekt22">Whiteboard</label><br>
+                            <input type="checkbox" id="objekt22" name="objekt" value="Whiteboard">
+                        </div>
+                    </form>
+                    <hr>
+                    <form class="form">
+                        <p>Problem*:</p>
+                        <div class="checkbox-container">
+                            <label for="idproblem1">Fehlt</label><br>
+                            <input type="radio" id="idproblem1" name="problem" value="fehlend">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="idproblem2">Kaputt</label><br>
+                            <input type="radio" id="idproblem2" name="problem" value="kaputt">
+                        </div>
+                        <div class="checkbox-container">
+                            <label for="idproblem3">Sonstiges</label><br>
+                            <input type="radio" id="idproblem3" name="problem" value="sonstiges"><br>
+                            <input type="text" id="idproblem3text" name="problem3text">
+                        </div>
+                    </form>
+                    <hr>
+                    <form class="form">
+                        <label for="details">Anmerkungen:</label>
+                        <input type="text" id="details" name="details" placeholder="Details eingeben" size="25" class="detailstextbox">
+                    </form>
+                    <hr>
+                    <form class="form">
+                        <label for="dringlichkeit">Dringlichkeit (1-10)*:</label>
+                        <input type="range" id="dringlichkeit" name="dringlichkeit" min="1" max="10" step="1" value="1" required>
+                    </form>
+                    <hr>
+                    <form class="form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name eingeben">
+                    </form>
+                    <hr>
+                    <form class="form">
+                        <button type="submit">Senden</button>
                     </form>
                 </article>
         </section>
